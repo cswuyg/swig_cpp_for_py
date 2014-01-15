@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CForPy", "CForPy\CForPy.vcxproj", "{E4F54D5D-EDE1-4E85-AE28-368FA07F72F4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPForPy", "CPPForPy\CPPForPy.vcxproj", "{012578A9-659C-406B-A57B-7E8BA01823B2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPVirtualForPy", "CPPVirtualForPy\CPPVirtualForPy.vcxproj", "{7311E975-23A4-4EA0-99AA-5F47DEC94A73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4F54D5D-EDE1-4E85-AE28-368FA07F72F4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E4F54D5D-EDE1-4E85-AE28-368FA07F72F4}.Debug|Win32.Build.0 = Debug|Win32
+		{E4F54D5D-EDE1-4E85-AE28-368FA07F72F4}.Release|Win32.ActiveCfg = Release|Win32
+		{E4F54D5D-EDE1-4E85-AE28-368FA07F72F4}.Release|Win32.Build.0 = Release|Win32
+		{012578A9-659C-406B-A57B-7E8BA01823B2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{012578A9-659C-406B-A57B-7E8BA01823B2}.Debug|Win32.Build.0 = Debug|Win32
+		{012578A9-659C-406B-A57B-7E8BA01823B2}.Release|Win32.ActiveCfg = Release|Win32
+		{012578A9-659C-406B-A57B-7E8BA01823B2}.Release|Win32.Build.0 = Release|Win32
+		{7311E975-23A4-4EA0-99AA-5F47DEC94A73}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7311E975-23A4-4EA0-99AA-5F47DEC94A73}.Debug|Win32.Build.0 = Debug|Win32
+		{7311E975-23A4-4EA0-99AA-5F47DEC94A73}.Release|Win32.ActiveCfg = Release|Win32
+		{7311E975-23A4-4EA0-99AA-5F47DEC94A73}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

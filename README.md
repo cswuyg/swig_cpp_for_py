@@ -1,4 +1,4 @@
-swig_cpp_for_py
-===============
+My exercise about SWIG wraps C\C++ for python.  
 
-swig wraps c or cpp for python.
+start 2014.1.15
+
