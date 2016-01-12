@@ -13,3 +13,7 @@ int add(int a, int b);
 std::vector<int> test(int a);
 std::string append(const std::string& a, const std::string& b); 
 std::vector<std::string> test(std::string a);
+void point_ret(std::string* result);
+void sub2(int x, int y, int* result);
+void two_ret(int x, const std::string& y, int* xx, std::string* yy);
+void ref_ret(std::string& result);
