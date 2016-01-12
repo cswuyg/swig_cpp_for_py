@@ -17,3 +17,5 @@ void point_ret(std::string* result);
 void sub2(int x, int y, int* result);
 void two_ret(int x, const std::string& y, int* xx, std::string* yy);
 void ref_ret(std::string& result);
+void get(unsigned int a, unsigned int& b);
+void gg(std::vector<std::string>* result);

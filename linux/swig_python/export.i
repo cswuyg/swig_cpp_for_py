@@ -7,12 +7,14 @@
 #include "export.h"
 %}
 
-%apply int *OUTPUT {int *result, int* xx};
-%apply std::string *OUTPUT {std::string* result, std::string* yy};
+%apply int *OUTPUT { int *result, int* xx};
+%apply std::string *OUTPUT { std::string* result, std::string* yy };
 %apply std::string &OUTPUT {std::string& result};
+%apply unsigned int &OUTPUT {unsigned int&};
+%template(vectori) std::vector<int>;
+%template(vectorstr) std::vector<std::string>;
+
+%apply std::vector<std::string> *OUTPUT {std::vector<std::string>* result};
 
 %include "export.h"
-namespace std {
-   %template(vectori) vector<int>;
-   %template(vectorstr) vector<std::string>;
-};
+

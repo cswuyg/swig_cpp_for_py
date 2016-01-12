@@ -40,3 +40,13 @@ void two_ret(int x, const std::string& y, int* xx, std::string* yy) {
 void ref_ret(std::string& result) {
     result = "hello cswuyg";
 }
+
+
+void get(unsigned int a, unsigned int& b) {
+    b = a;
+}
+
+void gg(std::vector<std::string>* result) {
+    (*result).push_back("hello");
+    (*result).push_back("world");
+}

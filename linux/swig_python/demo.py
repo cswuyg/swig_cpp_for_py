@@ -1,7 +1,5 @@
 #!/home/work/install/bin/python
 #-*-coding:utf-8-*-
-#cswuyg @ 2016.01.12
-
 import my_mod
 
 # test int add(int a, int b)
@@ -37,6 +35,11 @@ print(ret[1])
 ret = my_mod.ref_ret()
 print(ret)
 
+print(my_mod.get(10))
+
+x = my_mod.gg();
+for k in x:
+    print(k);
 """
 output:
 3
@@ -47,9 +50,4 @@ abcd
 a
 start
 end
--10
-all info
-10
-hello world
-hello cswuyg
 """

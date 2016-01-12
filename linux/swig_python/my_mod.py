@@ -154,34 +154,6 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _my_mod.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
-
-def add(a, b):
-    return _my_mod.add(a, b)
-add = _my_mod.add
-
-def append(a, b):
-    return _my_mod.append(a, b)
-append = _my_mod.append
-
-def test(*args):
-    return _my_mod.test(*args)
-test = _my_mod.test
-
-def point_ret():
-    return _my_mod.point_ret()
-point_ret = _my_mod.point_ret
-
-def sub2(x, y):
-    return _my_mod.sub2(x, y)
-sub2 = _my_mod.sub2
-
-def two_ret(x, y):
-    return _my_mod.two_ret(x, y)
-two_ret = _my_mod.two_ret
-
-def ref_ret():
-    return _my_mod.ref_ret()
-ref_ret = _my_mod.ref_ret
 class vectori(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, vectori, name, value)
@@ -408,6 +380,42 @@ class vectorstr(_object):
 vectorstr_swigregister = _my_mod.vectorstr_swigregister
 vectorstr_swigregister(vectorstr)
 
+
+def add(a, b):
+    return _my_mod.add(a, b)
+add = _my_mod.add
+
+def append(a, b):
+    return _my_mod.append(a, b)
+append = _my_mod.append
+
+def test(*args):
+    return _my_mod.test(*args)
+test = _my_mod.test
+
+def point_ret():
+    return _my_mod.point_ret()
+point_ret = _my_mod.point_ret
+
+def sub2(x, y):
+    return _my_mod.sub2(x, y)
+sub2 = _my_mod.sub2
+
+def two_ret(x, y):
+    return _my_mod.two_ret(x, y)
+two_ret = _my_mod.two_ret
+
+def ref_ret():
+    return _my_mod.ref_ret()
+ref_ret = _my_mod.ref_ret
+
+def get(a):
+    return _my_mod.get(a)
+get = _my_mod.get
+
+def gg():
+    return _my_mod.gg()
+gg = _my_mod.gg
 # This file is compatible with both classic and new-style classes.
 
 
