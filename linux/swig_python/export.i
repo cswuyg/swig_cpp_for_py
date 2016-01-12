@@ -14,5 +14,5 @@
 %include "export.h"
 namespace std {
    %template(vectori) vector<int>;
-    %template(vectorstr) vector<std::string>;
+   %template(vectorstr) vector<std::string>;
 };
