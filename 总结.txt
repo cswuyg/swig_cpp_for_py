@@ -1,0 +1,42 @@
+1、Linux下学习资料：
+http://blog.csdn.net/jwh_bupt/article/details/8287416
+
+
+2、Windows下学习资料
+http://blog.csdn.net/hugewaves/article/details/7705392
+
+
+
+    SWIG是Simplified Wrapper Interface Generator.
+
+
+    不需要看网络上的其他资料，只需要看官网文档就可以了。在官网下载到swigwin-2.0.11的包，在其目录下的Doc\Manual\Windows.h文件里有详细的windows下使用说明。了解下就好，马上动手实验。打开Examples\python\simple下的example.dsp文件，编译。编译不过，查看依赖的include文件和lib文件，把它们的路径设置到python目录中。文档推荐的是设置环境变量：PYTHON_INCLUDE、PYTHON_LIB，但还有两种解决方法：一种是工程的include里写入路径，可以把python的东西作为这个sln的thrid part；另一种是写一个bat脚本，bat设置了环境变量，然后启动devenv.exe。
+   步骤汇总：
+1、编写**.i文件，设置导出信息；参看demo，或者文档《5.1.1 Input format》
+2、使用swig.exe生成**_wrap.c文件和**.py文件；**_wrap.c文件用于跟C++文件合并起来编译生成dll，**.py文件用于被库使用者python脚本调用，它封装了对DLL导出函数的调用。
+3、编译**_wrap.c和C++文件生成dll，将dll改名为_**.pyd，以便**.py导入使用。
+4、写python代码，导入**.py模块，调用接口函数。
+    python调用涉及两部分：（1）**pyd文件，其实也就是个DLL文件；（2）**.py文件，也就是对DLL封装后的python脚本。这时候就可以写调用C++的python脚本了，它只依赖（2）中的**.py文件。另外，**.i、_**.pyd、**.py三文件的文件名是有关联的。
+    在编写proj的时候可以借助VC，让流程更简单，譬如把步骤2集成到编译中：把**.i文件加入到VC工程，然后设置该文件的“Custom Build Tool“，或者使用bat脚本，然后把脚本的调用加入到Pre-Build Event中，我更喜欢用bat脚本。
+    编译依赖：（1）python目录下的include、libs文件夹；（2）swigwin-2.0.11目录下的swig.exe、Lib文件夹。编译Debug版本可能出现找不到python27_d.lib的链接错误，解决方法很多：方法一：找到debug版本的lib；方法二修改pyconfig.h去掉#	define Py_DEBUG，然后再去掉对python27_d.lib的依赖，使用python27.lib代替；这种修改方式不好，改动太多，最简单的做法是定义一个SWIG_PYTHON_INTERPRETER_NO_DEBUG宏，放到Preprocessor即可，这是SWIG在生成的**_wrap.c文件里做的支持。
+    可以看看封装了DLL的**.py文件，确认导出了那些信息，如何导出。
+    
+    
+    
+举例：
+----------------------------
+%module add_module 
+
+%{
+#include "add.h"
+%}
+
+%include "add.h"
+----------------------------
+第一个%module表示模块名称。
+
+%{。。。。}%这中间的部分是被直接拷贝到xx_wrap.c中的。参看说明文档的《5.1.1 Input format》
+
+最后的%include "add.h" 是用于让swig去分析要导出哪些函数的，可以直接贴上add.h中的导出接口函数代码，这里用include当然更好了。
+
+

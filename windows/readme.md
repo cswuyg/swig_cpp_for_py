@@ -1,4 +1,4 @@
-My HelloWorld about how to use SWIG for python call C++.
+My HelloWorld about how to use SWIG for python call C++ in windows.
 The examples learn from SWIG's Examples, install it will find them.  [download SWIG](http://www.swig.org/download.html)
 
 
